@@ -1,11 +1,10 @@
----
-# 🌐 Paso 2: Interactuando con tu Nodo 🌐
+# Interactuando con tu Nodo 🌐
 
 Ahora vamos a usar **Polkadot.js Apps**, la interfaz de usuario más común para interactuar con blockchains basadas en Substrate, para visualizar tu red y ejecutar operaciones.
 
 ---
 
-## 1. Conectando Polkadot.js Apps a tu Nodo 🔌
+## 1. Conectando Polkadot.js a tu Nodo 🔌
 
 Para interactuar con tu nodo de parachain que corre en Codespaces, primero necesitas conectarlo a Polkadot.js.
 
@@ -45,7 +44,7 @@ Proposito y uso:
     * Asegúrate de que la **"Visibility"** para este puerto esté configurada como **"Public"**. Si no lo está, haz clic derecho en el puerto y cambia la visibilidad a publico.
     * **Copia la "Forwarded Address"** (link) para el puerto `9944`.
 
-2.  **Accede a Polkadot.js Apps:**
+2.  **Accede a Polkadot.js:**
     * Abre una **nueva pestaña** en tu navegador y ve a: [https://polkadot.js.org/apps/](https://polkadot.js.org/apps/)
 
 3.  **Conecta la Aplicación a tu Nodo:**
@@ -72,3 +71,9 @@ La pestaña **"Network" > "Explorer"** es tu panel de control principal.
 ### 2.2 Administrando Cuentas (`Accounts`)
 
 En la pestaña **"Accounts"**, puedes gestionar las cuentas de tu red.
+
+
+
+
+👉[Capitulo 3](/recursos/cap_3_subkey.md)
+---
