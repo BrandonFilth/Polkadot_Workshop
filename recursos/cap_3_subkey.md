@@ -181,3 +181,72 @@ En caso de que la firma sea invalida veras algo como esto:
 ```bash
 Error: SignatureInvalid
 ```
+## 7. Derivacion de cuentas:
+Ademas de generar claves aleatorias subkey te permite la derivacion de cuentas, es una funcionalidad que te permite crear mas pares de claves unicos a partir de una frase semilla.
+
+### Tipos de derivacion:
+ * Derivacion Hardened: Genera claves de forma que la clave privada hija no pueda ser derivada de la clave publica y la ruta de derivacion hardened, este tipo de derivacion es la mas comun ya que permite al usuario crear distintas billeteras con su respectiva clave privada cada una, todas esas cuenta son hijas de la misma frase semilla pero sus direcciones publicas no revelan parentescos entre si ni como se derivaron.
+
+ * Derivacion soft: Las claves privadas hijas pueden ser derivadas de la clave publica padre, por lo cual si alguien obtiene la clave publica padre y la ruta de derivacion soft podria calcular la clave publica hija.
+ esto la hace menos segura pero puede ser util en escenarios donde se necesita tener transparencia de derivacion como en los intercambios de criptomonedas o comercios que acepten cripto como metodo de pago, de esta forma puden crear una direccion unica para cada uno de sus clientes sin tener que gestionar una clave privada para cada una.
+
+
+### Inspeccionemos nuestra frase semilla para ver las diferencias:
+```bash
+subkey inspect 'judge shuffle deliver kit canal draw settle cigar noble true answer sketch'
+```
+
+```bash
+subkey inspect 'judge shuffle deliver kit canal draw settle cigar noble true answer sketch'
+Secret phrase:       judge shuffle deliver kit canal draw settle cigar noble true answer sketch
+  Network ID:        substrate
+  Secret seed:       0xbc946801656ff9ed9a9de0af17e31f5f8ca36b9dc6bfd71e41e691a767339c07
+  Public key (hex):  0x4221c2fc06c6efd782c58bb43df2ba198ff269beb09169c78af2a195f59abf1f
+  Account ID:        0x4221c2fc06c6efd782c58bb43df2ba198ff269beb09169c78af2a195f59abf1f
+  Public key (SS58): 5DZR3ftGEz6jFUgEgrA44MDzrKKMZUAKHNFbEpZhe98GoREK
+  SS58 Address:      5DZR3ftGEz6jFUgEgrA44MDzrKKMZUAKHNFbEpZhe98GoREK
+```
+### Para realizar una derivacion hardened se utiliza `//` (doble barra) seguido de un nombre (`//nombre`): 
+```bash
+subkey inspect 'judge shuffle deliver kit canal draw settle cigar noble true answer sketch//wallet1'
+```
+### O podemos usar rutas numericas `/1'` seguido de un numero con apostrofe :
+```bash
+subkey inspect 'judge shuffle deliver kit canal draw settle cigar noble true answer sketch/1'''
+```
+##### Nota: El final es parte del argumento del shell para escapar el apostrofe de la ruta. Muchos shells requieren que el URI completo este entre comillas simples o dobles, por lo que `'ruta/1'''` o `"ruta/1'"` son formas de escapar el apostrofe que es parte de la ruta de derivacion.
+
+### Ejemplo de salida:
+```bash
+Secret Key URI `judge shuffle deliver kit canal draw settle cigar noble true answer sketch//wallet1` is account:
+  Network ID:        substrate
+  Secret seed:       0x9eb666cfc03b2749cdb5127c1416c87a95134f88bd1efec8653ac51a34e3619b
+  Public key (hex):  0xb677bc3c00a7e326b8401e480e990a727fb3d2f549760ae5ce88ddb66b12b84f
+  Account ID:        0xb677bc3c00a7e326b8401e480e990a727fb3d2f549760ae5ce88ddb66b12b84f
+  Public key (SS58): 5GBx98XzxyQttdJ1y8WdLxqCpXuDE8kR9tb3dNayPhHmjUuN
+  SS58 Address:      5GBx98XzxyQttdJ1y8WdLxqCpXuDE8kR9tb3dNayPhHmjUuN
+```
+### Para realizar una derivacion soft se utiliza `/` (barra simple) seguido de un nombre (`/nombre`):
+```bash
+subkey inspect 'judge shuffle deliver kit canal draw settle cigar noble true answer sketch/polkadot'
+```
+### O podemos usar rutas numericas simples sin el apostrofe `/1`:
+```bash
+subkey inspect 'judge shuffle deliver kit canal draw settle cigar noble true answer sketch/2'
+```
+
+### Ejemplo de salida:
+```bash
+Secret Key URI `judge shuffle deliver kit canal draw settle cigar noble true answer sketch/polkadot` is account:
+  Network ID:        substrate
+  Secret seed:       n/a
+  Public key (hex):  0x94cca23e7d6a1d3ad14f8471ab78218b1ecbc7349606cdf206fcdde6edffc80e
+  Account ID:        0x94cca23e7d6a1d3ad14f8471ab78218b1ecbc7349606cdf206fcdde6edffc80e
+  Public key (SS58): 5FRojU9AdQk23YzyFkbKDJbgyiL6GfPrPtp3zzmCxL4yLfQj
+  SS58 Address:      5FRojU9AdQk23YzyFkbKDJbgyiL6GfPrPtp3zzmCxL4yLfQj
+```
+#### Nota: como puedes ver en Secreet seed no nos muestra nada y eso es debido a que al crear una ruta de derivacion soft con un nombre como `"/polkadot"` Substrate no simplemente suma un indice a la clave privada si no que utiliza un proceso donde involucra:
+* La clave publica padre
+* Un hash (generalmente Blake2) del nombre de la eruta de derivacion en este caso `"polkadot"`
+* Una funcion criptografica para combinar estos elementos y derivar la clave publica hija en este caso: `"5FRojU9AdQk23YzyFkbKDJbgyiL6GfPrPtp3zzmCxL4yLfQj"`
+
