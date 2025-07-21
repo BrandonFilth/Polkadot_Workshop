@@ -1,4 +1,5 @@
-![Logo de Polkadot](img/Polkadot_Logo.png "Logo de Polkadot")
+![Logo de Polkadot](/img/polkadotLogo.png "Logo de Polkadot")
+
 # Tu Primer Nodo Polkadot en la Nube
 
 ## 1. Configurando nuestro Entorno: GitHub Codespaces
@@ -93,10 +94,10 @@ Si tu nodo está funcionando correctamente, verás una serie de mensajes en la t
 
 * **`Imported #X`**: Este mensaje indica que tu nodo ha procesado y validado un **nuevo bloque** con el número `X`. Cada bloque contiene las últimas transacciones y el estado de la cadena, y su importación significa que tu nodo está al corriente con la cadena.
 * **`Idle (0 peers)`**: Esto significa que tu nodo está activo, pero **aún no se ha conectado a otros nodos** en la red. En un entorno de desarrollo local o en un Codespace aislado, como este, es completamente normal ver `0 peers`. En una red Polkadot real, este número aumentaría a medida que tu nodo descubra y se conecte a otros nodos para sincronizar el estado de la cadena.
-* **`Starting consensus session`**: Este mensaje muestra que el nodo está **participando activamente en el proceso de consenso**. Esto es clave para las parachains, ya que les permite proponer o validar nuevos bloques que eventualmente serán finalizados por la Relay Chain.
+* **`Starting consensus session`**: Este mensaje muestra que el nodo está **participando activamente en el proceso de consenso**. Esto es clave para las parachains, ya que les permite proponer o validar nuevos bloques que eventualmente serán finalizados por la [Relay Chain](/recursos/conceptos/RelayChain.md).
 
 ### **Manten la terminal abierta** Tu nodo debe seguir ejecutándose para que podamos interactuar con él en los siguientes pasos. No cierres la ventana ni detengas el proceso.
 
-👉 [Paso 2](/recursos/cap_2.md)
+👉 [Paso 2](/recursos/cap_2(ConexionJs).md)
 ---
 
