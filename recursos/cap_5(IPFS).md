@@ -1,7 +1,24 @@
+![IPFS LOGO](/img/IPFS.png)
 
+# ¿Que es IPFS?:
 
+Es un sistema de archivos distribuido Peer to Peer (P2P) que a diferencia de la web normal (HTTP) donde se busca un archivo por su ubicacion en un servidor en especifico, en IPFS busca un archivo por su contenido.
 
+![IPFS](/img/ClienteServidorVsIPFS.png)
 
+## ¿Como funciona?
+* `CID`: Funciona mediante un direccionamiento de contenido donde si un solo bit cambia toda su Hash cambia.
+* `Evita la duplicacion`: si dos personas suben el mismo archivo tendra el mismo CID por lo cual la red solo almacenara una copia ahorrando mucho espacio evitando archivos duplicados en la red.
+* `Almacenamiento diestribuido`: Los archivos no se almacenan en un servidor principal en su lugar se distribuyen entre muchos nodos de la red IPFS.
+* `Pinning`: Por defecto un archivo subido a IPFS no esta garantizado que permanezca en la red para siempre un nodo solo guarda un archivo mientras lo necesite o tenga espacio, es ahi donde entra el pinning con servicios como Crust Network que ofrecen el pinning icentivado lo que significa que pagan a los nodos par que mantengan los archivos a largo plazo.
+* `IPFS Gateway`: Son servidores que actuan como puentes entre IPFS y HTTP. Esto es bastante util porque los navegadores web aun no entienden IPFS y te lo sirve como HTTP en tu browser.
+## Beneficios
+
+* `Resiliencia y Disponibilidad`: Los archivos están distribuidos en múltiples nodos, lo que los hace más resistentes a fallos de un solo punto y a la censura.
+
+* `Eficiencia`: Permite la deduplicación de archivos y la recuperación de datos desde el nodo más cercano o más rápido.
+
+* `Integridad del Contenido`: El uso de CIDs garantiza que el contenido no ha sido alterado.
 
 ##  Gestión y Carga de Archivos Locales en la Interfaz
 
