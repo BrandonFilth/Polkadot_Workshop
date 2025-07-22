@@ -1,6 +1,6 @@
 ![IPFS LOGO](/img/IPFS.png)
 
-# ¿Que es IPFS?:
+# ¿Que es IPFS?
 
 Es un sistema de archivos distribuido Peer to Peer (P2P) que a diferencia de la web normal (HTTP) donde se busca un archivo por su ubicacion en un servidor en especifico, en IPFS busca un archivo por su contenido.
 
@@ -78,7 +78,7 @@ Añadimos nuestro CID `QmSREWRgbFPziQHe4DPR9gvzZR6xVsha2mxgWFyig7PSff`:
 https://ipfs.io/ipfs/QmSREWRgbFPziQHe4DPR9gvzZR6xVsha2mxgWFyig7PSff
 ``` 
 
-## Exportacion e importacion.
+## Exportacion e importacion
 Por ultimo podemos exportar una lista de todos nuestros archivos cargados para asi no perder su registro y mentenerlos accesibles importandolos en nuestra siguiente sesion o cuando sea necesitado.
 
 ![IPFS](/img/IPFSExport.png)
