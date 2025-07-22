@@ -252,3 +252,7 @@ Secret Key URI `judge shuffle deliver kit canal draw settle cigar noble true ans
 * Un hash (generalmente Blake2) del nombre de la eruta de derivacion en este caso `"polkadot"`
 * Una funcion criptografica para combinar estos elementos y derivar la clave publica hija en este caso: `"5FRojU9AdQk23YzyFkbKDJbgyiL6GfPrPtp3zzmCxL4yLfQj"`
 
+👉[Capitulo 5](/recursos/cap_5(IPFS).md)
+---
+
+

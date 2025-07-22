@@ -73,6 +73,16 @@ Mas alla de las transferencias de fondos, una blockchain tambien permite registr
 * `encoded call hash`: Este es el hash criptografico unico funciona como una huella digital.
 * `encoding details`: Proporciona una vista legible de los datos codificados, confirmando que es una llamada al modulo system, metodo remark, con el valor "hola mundo" (mostrado en hexadecimal).
 
+Mas alla de funciones como system.remark, la pestaña "Extrinsics" te permite acceder a una amplia gama de funciones ("calls") de diferentes "pallets" (modulos) de tu runtime. Por ejemplo, dentro del pallet system, encontramos funciones para gestionar el codigo del runtime (setCode) o limpiar almacenamiento (killPrefix).
 
-👉[Capitulo 3](/recursos/cap_4(CifradoSubkey).md)
+![Remark](/img/jsRemark.png)
+Desde esta misma seccion podemos realizar transferencias de fondos. Si seleccionas el pallet balances (visible en el menu desplegable), encontraras funciones como:
+
+* transfer(dest, value): Para enviar una cantidad especifica de tokens a una direccion de destino.
+
+* transferAll(dest, keepAlive): Para transferir todos los fondos disponibles de tu cuenta a un destino, opcionalmente dejando un balance minimo para mantener la cuenta viva.
+
+* burn(value, keepAlive): Para quemar (destruir) fondos de tu cuenta.
+
+👉[Capitulo 4](/recursos/cap_4(CifradoSubkey).md)
 ---

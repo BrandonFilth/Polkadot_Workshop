@@ -103,5 +103,5 @@ Una vez que se complete la descarga puedes volver a la ventana principal y podra
 
 
 
-👉[Capitulo 3](/recursos/cap_3(FuncionesJs).md)
+👉[Capitulo 3](/recursos/cap_3(Extrinsics).md)
 ---                                                                                                            
