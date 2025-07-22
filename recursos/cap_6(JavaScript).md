@@ -80,4 +80,11 @@ Change detected, new balances: [{nonce: 4, consumers: 1, providers: 1, sufficien
 - `flags`: Banderas internas relacionadas con el estado de la cuenta.
 
 
+## Polkadot Builder Map
+
+![IPFS](/img/builderMap.png)
+
+Por ultimo me gustaria recomendarles esta pagina creada por [Simon](https://x.com/simonxpe) te ofrece un panorama muy amplio del ecosistema y sus ramas de estudio.
+
+👉 [Polkadot builder Map](https://themvp07.github.io/PolkadotBuilderMap/)
 ---
