@@ -78,11 +78,11 @@ Mas alla de funciones como system.remark, la pestaña "Extrinsics" te permite ac
 ![Remark](/img/jsRemark.png)
 Desde esta misma seccion podemos realizar transferencias de fondos. Si seleccionas el pallet balances (visible en el menu desplegable), encontraras funciones como:
 
-* transfer(dest, value): Para enviar una cantidad especifica de tokens a una direccion de destino.
+*  `transfer(dest, value) `: Para enviar una cantidad especifica de tokens a una direccion de destino.
 
-* transferAll(dest, keepAlive): Para transferir todos los fondos disponibles de tu cuenta a un destino, opcionalmente dejando un balance minimo para mantener la cuenta viva.
+* `transferAll(dest, keepAlive) `: Para transferir todos los fondos disponibles de tu cuenta a un destino, opcionalmente dejando un balance minimo para mantener la cuenta viva.
 
-* burn(value, keepAlive): Para quemar (destruir) fondos de tu cuenta.
+*  `burn(value, keepAlive) `: Para quemar (destruir) fondos de tu cuenta.
 
 👉[Capitulo 4](/recursos/cap_4(CifradoSubkey).md)
 ---
