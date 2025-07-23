@@ -43,7 +43,7 @@ Esta sección de la interfaz de Polkadot-JS Apps te permite gestionar archivos d
 ![IPFS](/img/IPFSUpload.png)
 
 ## Que esta ocurriendo por detras?
-* Calculo del hash IPFS: Al realizar la carga de un archivo tuiu navegador calcula el Content Identifier (CID) unico para el archivo, este CID es el hash criptografico del archivo.
+* Calculo del hash IPFS: Al realizar la carga de un archivo tu navegador calcula el Content Identifier (CID) unico para el archivo, este CID es el hash criptografico del archivo.
 * Envio al Gateway IPFS: Como podemos ver en el ejemplo el archivo al IPFS seleccionado en este caso "Crust Network(Seattle)" a travez de una conexion HTTPS, este gateway es el responsable de inyectar el archivo en la red IPFS.
 * Creacion de la orden de Pinning en la blockchain: Suele ser un extrinsic como crust.placeStorageOrder (Si usamos Crust Network) esta transaccion tendra el CID del archivo IPFS, la informacion sobre el servicio de Pinning y los parametros para el pago por el pinning.
 * Envio de la transaccion: La transacion firmada se envia a los nodos de tu red, los collators la incluyen en un bloque y los validadores la verifican.
