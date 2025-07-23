@@ -150,7 +150,7 @@ Un usuario puede escribir un mensaje y firmarlo con su clave privada usando subk
 
 
 
-Para firmar un mensaje necesitas tu frase semilla o tu URI como `//Alice` y el mensaje que quieres firmar. El mensaje se le pasara a `subkey sign` a traves de la entrada estandar(STDIN):
+Para firmar un mensaje necesitas tu frase semilla o tu URI como `//Alice` y el mensaje que quieres firmar. El mensaje se le pasara a `subkey sign` a traves de la entrada estandar  `(STDIN) `:
 ```bash
    echo "Hola 🌐" | subkey sign --suri 'judge shuffle deliver kit canal draw settle cigar noble true answer sketch'
 ```
