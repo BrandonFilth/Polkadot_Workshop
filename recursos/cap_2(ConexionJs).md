@@ -73,7 +73,7 @@ La pestaña **"Network" > "Explorer"** es tu panel de control principal.
 
 En la pestaña **"Accounts"**, puedes gestionar las cuentas de tu red. Como puedes observar en la interfaz de Polkadot.js, ya tenemos varias cuentas de desarrollo preañadidas y con tokens disponibles, los cuales puedes transferir y usar para pagar las tarifas de gas en la red.
 
-### Ve a "Accounts" > "Accounts" Aqui veras un listado de cuentas:
+### Ve a  `"Accounts" > "Accounts" ` Aqui veras un listado de cuentas:
 Tu parachain, al estar basada en Substrate, viene con un conjunto de cuentas de desarrollo predefinidas (Alice, Bob, Charlie, etc.) cada una tendra un saldo inicial de tokens pre-minados para desarrollo.
 ![Accounts](/img/jsAcc.png/)
 

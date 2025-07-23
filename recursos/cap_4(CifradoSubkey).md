@@ -142,7 +142,7 @@ Para cada ejemplo, `subkey` generara frases semilla y direcciones hasta que encu
 Ademas de gestionar claves subkey te permite firmar digitalmente mensajes con tu clave privada y verificar firmas con la clave publica de el firmante. Firmar mensajes es muy util ya que va mas alla de probar la propiedad de la cuenta si no que tambien sirve para:
 * `Gobernanza y propuestas:` Un usuario con tokens puede votar en propuestas firmando un mensaje off-chain que declare su su intencion de voto algo como `("Vote 'yes' on proposal #123")`. Luego ese mensaje se envia a un servicio o relayer que agrupa varias firmas y envia una unica transaccion en cadena lo cual reduce la carga y las tarifas de la red.
 * `Mensajes de autenticacion:`
-Por ejemplo al utilizar una DApp o un servicio web necesita verificar que el usuario que esta conectando su wallet es el propietario de la direccion que esta tratando de conectar.La DApp le pide al usuario que firme un mensaje por ejemplo: una cadena de texto. El usuario firma este mensaje, la DApp luego recibe la firma y la clave publica del usuario, y confirma que la firma es valida para ese mensaje y esa clave publica. Esto permite autenticar a los usuarios sin necesidad de contraseñas tradicionales.
+Por ejemplo al utilizar una  `DApp ` o un servicio web necesita verificar que el usuario que esta conectando su wallet es el propietario de la direccion que esta tratando de conectar. La  `DApp ` le pide al usuario que firme un mensaje por ejemplo: una cadena de texto. El usuario firma este mensaje, la  `DApp ` luego recibe la firma y la clave publica del usuario, y confirma que la firma es valida para ese mensaje y esa clave publica. Esto permite autenticar a los usuarios sin necesidad de contraseñas tradicionales.
 * `Comunicacion entre usuarios:`
 Un usuario puede escribir un mensaje y firmarlo con su clave privada usando subkey. Luego envia el mensaje y la firma a otro usuario el cual puede verificar el mensaje como en el siguiente ejemplo:
 
@@ -150,7 +150,7 @@ Un usuario puede escribir un mensaje y firmarlo con su clave privada usando subk
 
 
 
-Para firmar un mensaje necesitas tu frase semilla o tu URI como `//Alice` y el mensaje que quieres firmar. El mensaje se le pasara a `subkey sign` a traves de la entrada estandar(STDIN):
+Para firmar un mensaje necesitas tu frase semilla o tu URI como `//Alice` y el mensaje que quieres firmar. El mensaje se le pasara a `subkey sign` a traves de la entrada estandar  `(STDIN) `:
 ```bash
    echo "Hola 🌐" | subkey sign --suri 'judge shuffle deliver kit canal draw settle cigar noble true answer sketch'
 ```
@@ -249,7 +249,7 @@ Secret Key URI `judge shuffle deliver kit canal draw settle cigar noble true ans
 ```
 ##### Nota: como puedes ver en Secreet seed no nos muestra nada y eso es debido a que al crear una ruta de derivacion soft con un nombre como `"/polkadot"` Substrate no simplemente suma un indice a la clave privada si no que utiliza un proceso donde involucra:
 * La clave publica padre
-* Un hash (generalmente Blake2) del nombre de la eruta de derivacion en este caso `"polkadot"`
+* Un hash (generalmente Blake2) del nombre de la ruta de derivacion en este caso `"polkadot"`
 * Una funcion criptografica para combinar estos elementos y derivar la clave publica hija en este caso: `"5FRojU9AdQk23YzyFkbKDJbgyiL6GfPrPtp3zzmCxL4yLfQj"`
 
 👉[Capitulo 5](/recursos/cap_5(IPFS).md)

@@ -7,7 +7,7 @@ Ahora que tienes cuentas, vamos a realizar una transferencia simple para ver la 
 * Haz clic en el boton "enviar": A la derecha del nombre de Alice y su saldo
 * "send from account": Deberia estar preseleccionada Alice.
 * "send to address": Aqui debes pegar la direccion SS58 de tu cuenta o seleccionar una.
-* "amount": Ingresa una cantidad de tokens a transferir por ejemplo, 1000000000000 si quieres enviar 1 MUNIT ya que MUNIT es una unidad con 12 decimales por defecto, o simplemente envia 1 UINT (MUNIT completo equivale a 1,000,000,000,000 (1 billon) de la unidad base UNIT).
+* "amount": Ingresa una cantidad de tokens a transferir por ejemplo,  `1000000000000 ` si quieres enviar 1 MUNIT ya que MUNIT es una unidad con 12 decimales por defecto, o simplemente envia 1 UINT (MUNIT completo equivale a 1,000,000,000,000 (1 billon) de la unidad base UNIT).
 *  Enviamos la transaccion.
 
 ![Transfer](/img/jsFirma.png)
@@ -35,7 +35,7 @@ Tambien podemos ver los datos del extrinsic detalladamente de cada evento ocurri
 * `parachainSystem.setValidationData`: Es una operacion interna que se encarga de actualizar la informacion que los validadores de la red usan para verificar la validez de los bloques y el estado de la red.
 * `timestamp.set`: Registra la marca de tiempo del bloque permitiendo que todas las transacciones dentro de este bloque tengan una marca de tiempo.
 * `balances.transferKeepAlive`: Es una funcion para transferir fondos de una cuenta a otra que permite mantener viva la cuenta incluso si la cuenta de origen queda con un balance muy bajo.
-* `Eventos`: como puedes ver tenemos una secuencia de eventos los cuales son: balances.Withdraw > balances.Transfer > balances.Deposit > transactionPayment.TransactionFeePaid > system.ExtrinsicSucces.
+* `Eventos`: como puedes ver tenemos una secuencia de eventos los cuales son:  `balances.Withdraw > balances.Transfer > balances.Deposit > transactionPayment.TransactionFeePaid > system.ExtrinsicSucces `.
 * `Weight`: Es una unidad que mide el consumo de recursos la cual incrementa si se require mayor complejidad computacional, mas almacenamiento o mayor tamaño de datos.
 * `Fee`: Es la tarifa de transaccion la cual puede aumentar si el `weight` es mayor, si la red esta congestionada (con mucha carga) y por ultimo, si se añade una propina adicional para que la transaccion sea procesada mas rapidamente.
 
@@ -78,11 +78,11 @@ Mas alla de funciones como system.remark, la pestaña "Extrinsics" te permite ac
 ![Remark](/img/jsRemark.png)
 Desde esta misma seccion podemos realizar transferencias de fondos. Si seleccionas el pallet balances (visible en el menu desplegable), encontraras funciones como:
 
-* transfer(dest, value): Para enviar una cantidad especifica de tokens a una direccion de destino.
+*  `transfer(dest, value)`: Para enviar una cantidad especifica de tokens a una direccion de destino.
 
-* transferAll(dest, keepAlive): Para transferir todos los fondos disponibles de tu cuenta a un destino, opcionalmente dejando un balance minimo para mantener la cuenta viva.
+* `transferAll(dest, keepAlive)`: Para transferir todos los fondos disponibles de tu cuenta a un destino, opcionalmente dejando un balance minimo para mantener la cuenta viva.
 
-* burn(value, keepAlive): Para quemar (destruir) fondos de tu cuenta.
+*  `burn(value, keepAlive)`: Para quemar (destruir) fondos de tu cuenta.
 
 👉[Capitulo 4](/recursos/cap_4(CifradoSubkey).md)
 ---
