@@ -9,8 +9,8 @@ Este entorno te da acceso a:
 * `Keyring`: Para gestionar y firmar transacciones con tus cuentas.
 * `Hashing, types, util`: Utilidades para operaciones criptograficas, manejo de tipos de datos Substrate y funciones auxiliares.
 ---
-## Ejemplo 1 (Make transfer and listen to events):
-Este ejemplo (Make transfer and listen to events) demuestra cómo enviar una transacción de transferencia de tokens y, crucialmente, cómo escuchar y procesar los eventos que la blockchain emite una vez que la transacción ha sido incluida en un bloque
+## Ejemplo 1  `(Make transfer and listen to events)`:
+Este ejemplo  `(Make transfer and listen to events) ` demuestra cómo enviar una transacción de transferencia de tokens y, crucialmente, cómo escuchar y procesar los eventos que la blockchain emite una vez que la transacción ha sido incluida en un bloque
 
 ![IPFS](/img/extraTransfer.png)
 
@@ -46,7 +46,7 @@ La metadata es la base para interactuar programaticamente con cualquier cadena S
 - `Compatibilidad y Actualizaciones`: Monitorear la version de la metadata es vital para asegurar que las aplicaciones externas sigan siendo compatibles despues de una actualizacion del runtime de la blockchain.
 
 ---
-## Ejemplo 3 (Listen to multiple balances changes):
+## Ejemplo 3  `(Listen to multiple balances changes) `:
 
 Demuestra cómo suscribirse a las actualizaciones de estado de una o varias cuentas. Esto significa que cada vez que el balance o la información de la cuenta (como el nonce) de las direcciones monitoreadas cambie, tu código recibirá una notificación con la información actualizada.
 
