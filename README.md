@@ -33,11 +33,11 @@ Ahora que tenemos nuestro Codespace listo, vamos a usar un script para instalar 
 1.  **Abre la Terminal:** Dentro de tu Codespace, busca la terminal. Generalmente, está en la parte inferior. Si no la ves, puedes ir al menu de la esquina superior izquierda > `Terminal > New Terminal` en el menú superior.
 2.  **Añade los Permisos de Ejecución:**
     ```bash
-    chmod +x install.sh
+    chmod +x script.sh
     ```
 3.  **Ejecuta el Script:**
     ```bash
-    ./install.sh
+    ./script.sh
     ```
 
 El script mostrará un "spinner" y mensajes de progreso. Esto tomará varios minutos, Es normal que parezca que no pasa nada por un momento, pero el spinner te indicará que está trabajando.
