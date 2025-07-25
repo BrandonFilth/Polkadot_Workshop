@@ -98,6 +98,8 @@ Si tu nodo está funcionando correctamente, verás una serie de mensajes en la t
 
 ### **Manten la terminal abierta** Tu nodo debe seguir ejecutándose para que podamos interactuar con él en los siguientes pasos. No cierres la ventana ni detengas el proceso.
 
+https://solid-spork-jvgxq5w9v4rfq96p-9944.app.github.dev/
+
 👉 [Capitulo 2](/recursos/cap_2(ConexionJs).md)
 ---
 
